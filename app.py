@@ -18,10 +18,10 @@ uploaded_file = st.file_uploader("PDFファイルを選択してください", t
 if uploaded_file is not None:
     text = read_pdf(uploaded_file)
     
-    # 3行要約をする（sentences_count=3なので、3行）
+    # 2000行要約をする（sentences_count=2000なので、2000行）
     parser = PlaintextParser.from_string(text, Tokenizer('japanese'))
     summarizer = LexRankSummarizer()
-    res = summarizer(document=parser.document, sentences_count=3)
+    res = summarizer(document=parser.document, sentences_count=2000)
 
     for sentence in res:
         st.write(sentence)
