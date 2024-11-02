@@ -1,0 +1,5 @@
+sumy
+tinysegmenter
+ginza ja-ginza
+streamlit
+PyPDF2
