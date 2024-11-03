@@ -1,4 +1,4 @@
-9import streamlit as st
+import streamlit as st
 from PyPDF2 import PdfReader
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
