@@ -17,17 +17,17 @@ def read_pdf(file):
 st.markdown(
     """
     <style>
-    .css-1cpxqw2 .stFileUploader label {
+    .stFileUploader label {
         display: none;
     }
-    .css-1cpxqw2 .stFileUploader div {
+    .stFileUploader div {
         font-size: 16px;
         color: #000;
     }
-    .css-1cpxqw2 .stFileUploader div::before {
+    .stFileUploader div::before {
         content: 'ここにファイルをドラッグ＆ドロップしてください';
     }
-    .css-1cpxqw2 .stFileUploader div button {
+    .stFileUploader div button {
         display: none;
     }
     </style>
