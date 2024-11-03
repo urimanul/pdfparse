@@ -13,27 +13,7 @@ def read_pdf(file):
         text += page.extract_text()
     return text
 
-# カスタムCSSを追加
-st.markdown(
-    """
-    <style>
-    .stFileUploader label {
-        display: none;
-    }
-    .stFileUploader div {
-        font-size: 16px;
-        color: #000;
-    }
-    .stFileUploader div::after {
-        content: 'ここにファイルをドラッグ＆ドロップしてください';
-    }
-    .stFileUploader div button {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+import streamlit as st from PyPDF2 import PdfReader from sumy.parsers.plaintext import PlaintextParser from sumy.nlp.tokenizers import Tokenizer from sumy.summarizers.lex_rank import LexRankSummarizer from io import BytesIO def read_pdf(file): pdf_reader = PdfReader(file) text = "" for page_num in range(len(pdf_reader.pages)): page = pdf_reader.pages[page_num] text += page.extract_text() return text # カスタムCSSを追加 st.markdown( """ <style> .stFileUploader label { display: none; } .stFileUploader div { font-size: 16px; color: #000; } .stFileUploader div::before { content: 'ここにファイルをドラッグ＆ドロップしてください'; } .stFileUploader div button { display: none; } .stFileUploader div::after { content: 'ファイルを選択'; display: inline-block; background-color: #007bff; color: white; padding: 0.5em 1em; border-radius: 4px; cursor: pointer; } </style> """, unsafe_allow_html=True )
 
 # Streamlitアプリの設定
 st.title('PDFパーサー')
