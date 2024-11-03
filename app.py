@@ -25,7 +25,7 @@ st.markdown(
         color: #000;
     }
     .stFileUploader div::before {
-        content: 'ここにファイルをドラッグ＆ドロップしてください';
+        content: '';
     }
     .stFileUploader div button {
         display: none;
