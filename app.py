@@ -13,6 +13,10 @@ def read_pdf(file):
         text += page.extract_text()
     return text
 
+# Streamlitアプリの設定
+st.title('PDFパーサー')
+st.write('PDFファイル要約')
+
 uploaded_file = st.file_uploader("PDFファイルを選択してください", type=["pdf"])
 
 if uploaded_file is not None:
