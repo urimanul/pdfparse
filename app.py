@@ -26,7 +26,7 @@ if uploaded_file is not None:
     st.write(f"読み込んだPDFファイルの文字数: {len(text)}文字")
     
     # 要約行数を指定
-    sentences_count = st.number_input("要約行数を指定してください", min_value=1, max_value=100000, value=1000)
+    sentences_count = st.number_input("要約行数を指定してください", min_value=1, max_value=100000, value=500)
     
     # 要約を実行
     parser = PlaintextParser.from_string(text, Tokenizer('japanese'))
