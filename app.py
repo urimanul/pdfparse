@@ -22,6 +22,9 @@ uploaded_file = st.file_uploader("PDFファイルを選択してください", t
 if uploaded_file is not None:
     text = read_pdf(uploaded_file)
     
+    # 読み込んだPDFファイルの文字数を表示
+    st.write(f"読み込んだPDFファイルの文字数: {len(text)}文字")
+    
     # 要約行数を指定
     sentences_count = st.number_input("要約行数を指定してください", min_value=1, max_value=100000, value=1000)
     
