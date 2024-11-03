@@ -7,7 +7,8 @@ from io import BytesIO
 import mysql.connector
 import Locales
 
-locale.setlocale(locale.LC_ALL, "de_DE")
+loc = Locales("lang.json")
+loc.set_default_lang("jp")
 
 def read_pdf(file):
     pdf_reader = PdfReader(file)
