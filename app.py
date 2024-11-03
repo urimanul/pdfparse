@@ -17,7 +17,7 @@ def read_pdf(file):
 st.title('PDFパーサー')
 st.write('PDFファイル要約')
 
-uploaded_file = st.file_uploader(label="ここにファイルをドラッグ＆ドロップしてください", type=["pdf"])
+uploaded_file = st.file_uploader("PDFファイルを選択してください", type=["pdf"], label="ここにファイルをドラッグ＆ドロップしてください")
 
 if uploaded_file is not None:
     text = read_pdf(uploaded_file)
