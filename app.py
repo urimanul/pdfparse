@@ -25,13 +25,20 @@ if uploaded_file is not None:
     # 読み込んだPDFファイルの文字数を表示
     st.write(f"読み込んだPDFファイルの文字数: {len(text)}文字")
     
-    # 要約行数を指定
-    sentences_count = st.number_input("要約行数を指定してください", min_value=1, max_value=100000, value=500)
+    # 要約文字数を指定
+    char_count = st.number_input("要約文字数を指定してください", min_value=1, max_value=100000, value=500)
     
     # 要約を実行
     parser = PlaintextParser.from_string(text, Tokenizer('japanese'))
     summarizer = LexRankSummarizer()
-    res = summarizer(document=parser.document, sentences_count=sentences_count)
+    res = summarizer(document=parser.document, sentences_count=1000)  # 大きな値を設定しておく
 
+    # 指定された文字数に要約を調整
+    summary = ""
     for sentence in res:
-        st.write(sentence)
+        if len(summary) + len(str(sentence)) <= char_count:
+            summary += str(sentence)
+        else:
+            break
+
+    st.write(summary)
