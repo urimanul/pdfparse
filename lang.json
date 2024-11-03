@@ -1,0 +1,18 @@
+{
+  "languages": {
+      "jp": "日本語", "eng": "English", "kr": "한국어"
+  },
+
+  "messages": {
+      "welcome": {
+          "jp": "ようこそ",
+          "eng": "Welcome!",
+          "kr": "어서오세요"
+      },
+      "goodbye": {
+          "jp": "さようなら",
+          "eng": "Goodbye",
+          "kr": "안녕히 가세요"
+      }
+  }
+}
