@@ -4,3 +4,4 @@ ginza
 ja-ginza
 streamlit
 PyPDF2
+mysql-connector-python
