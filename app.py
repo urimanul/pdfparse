@@ -5,6 +5,7 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 from io import BytesIO
 import mysql.connector
+import locale
 
 def read_pdf(file):
     pdf_reader = PdfReader(file)
