@@ -7,6 +7,8 @@ from io import BytesIO
 import mysql.connector
 import locale
 
+locale.setlocale(locale.LC_ALL, "de_DE")
+
 def read_pdf(file):
     pdf_reader = PdfReader(file)
     text = ""
