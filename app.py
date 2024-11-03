@@ -13,6 +13,28 @@ def read_pdf(file):
         text += page.extract_text()
     return text
 
+# カスタムCSSを追加
+st.markdown(
+    """
+    <style>
+    .css-1cpxqw2 .stFileUploader label {
+        display: none;
+    }
+    .css-1cpxqw2 .stFileUploader div {
+        font-size: 16px;
+        color: #000;
+    }
+    .css-1cpxqw2 .stFileUploader div::before {
+        content: 'ここにファイルをドラッグ＆ドロップしてください';
+    }
+    .css-1cpxqw2 .stFileUploader div button {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Streamlitアプリの設定
 st.title('PDFパーサー')
 st.write('PDFファイル要約')
