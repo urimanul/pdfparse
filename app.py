@@ -29,6 +29,7 @@ st.markdown(
     }
     .stFileUploader div button {
         display: none;
+        content: 'ファイル'
     }
     </style>
     """,
