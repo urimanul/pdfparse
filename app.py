@@ -24,7 +24,7 @@ st.markdown(
         font-size: 16px;
         color: #000;
     }
-    .stFileUploader div::before {
+    .stFileUploader div::after {
         content: 'ここにファイルをドラッグ＆ドロップしてください';
     }
     .stFileUploader div button {
