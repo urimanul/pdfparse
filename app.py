@@ -1,4 +1,4 @@
-import streamlit as st
+9import streamlit as st
 from PyPDF2 import PdfReader
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
@@ -17,7 +17,7 @@ def read_pdf(file):
 st.title('PDFパーサー')
 st.write('PDFファイル要約')
 
-uploaded_file = st.file_uploader("PDFファイルを選択してください", type=["pdf"])
+uploaded_file = st.file_uploader(label="ここにファイルをドラッグ＆ドロップしてください", "PDFファイルを選択してください", type=["pdf"])
 
 if uploaded_file is not None:
     text = read_pdf(uploaded_file)
