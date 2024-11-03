@@ -19,7 +19,7 @@ if uploaded_file is not None:
     text = read_pdf(uploaded_file)
     
     # 要約行数を指定
-    sentences_count = st.number_input("要約行数を指定してください", min_value=1, max_value=100, value=3)
+    sentences_count = st.number_input("要約行数を指定してください", min_value=1, max_value=100000, value=3)
     
     # 要約を実行
     parser = PlaintextParser.from_string(text, Tokenizer('japanese'))
