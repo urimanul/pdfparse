@@ -5,7 +5,7 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 from io import BytesIO
 import mysql.connector
-import locale
+import Locales
 
 locale.setlocale(locale.LC_ALL, "de_DE")
 
